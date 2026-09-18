@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Notes Scolaires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Plateforme de Gestion des Notes</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Connexion</a></li>
+                <li><a href="#enseignant">Professeur</a></li>
+                <li><a href="#eleve">Élève</a></li>
+                <li><a href="#parent">Parent</a></li>
+                <li><a href="#admin">Administration</a></li>
+            </ul>
+        </nav>
+        <!-- Bouton changement de thème -->
+        <button id="themeToggle">🌙 Mode Sombre</button>
+    </header>
+
+    <!-- Section Connexion -->
+    <section id="login">
+        <h2>Connexion</h2>
+        <form id="formLogin">
+            <label>Nom d’utilisateur :</label>
+            <input type="text" id="username" required>
+            <label>Mot de passe :</label>
+            <input type="password" id="password" required>
+            <label>Rôle :</label>
+            <select id="role">
+                <option value="enseignant">Professeur</option>
+                <option value="eleve">Élève</option>
+                <option value="parent">Parent</option>
+                <option value="admin">Administration</option>
+            </select>
+            <button type="button" onclick="login()">Se connecter</button>
+        </form>
+        <p id="loginMessage"></p>
+    </section>
+
+    <!-- Section Professeur -->
+    <section id="enseignant" class="hidden">
+        <h2>Saisie des Notes</h2>
+        <form id="formNotes">
+            <label>Nom de l’élève :</label>
+            <input type="text" id="nomEleve" required>
+            <label>Note :</label>
+            <input type="number" id="noteEleve" min="0" max="20" required>
+            <button type="button" onclick="ajouterNote()">Ajouter</button>
+        </form>
+        <div id="listeNotes"></div>
+    </section>
+
+    <!-- Section Élève -->
+    <section id="eleve" class="hidden">
+        <h2>Tableau de Bord Élève</h2>
+        <div id="resultatsEleve"></div>
+    </section>
+
+    <!-- Section Parent -->
+    <section id="parent" class="hidden">
+        <h2>Accès Parent</h2>
+        <div id="resultatsParent"></div>
+    </section>
+
+    <!-- Section Administration -->
+    <section id="admin" class="hidden">
+        <h2>Statistiques Globales</h2>
+        <div id="stats"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

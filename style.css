@@ -1,0 +1,52 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://pin.it/AxXiJV9Kq');
+    background-size: cover;
+    background-position: center;
+    color: rgb(82, 3, 45);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    background: rgba(122, 90, 106, 0.6);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Mode clair */
+body.light {
+    background: #f0f0f0;
+    color: #814855;
+}
+
+body.light section {
+    background: rgba(255,255,255,0.8);
+}
+
+body.light header {
+    background: rgba(200,200,200,0.9);
+}
